@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../styles/components/Header.styl';
 
-const Header = props => (
+export const Header = props => (
   <div className="Header">
     <h1 className="Header-title">
       <Link to="/">
