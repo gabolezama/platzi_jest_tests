@@ -1,7 +1,6 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { mount, shallow, render } from "enzyme";
 import Footer from "../../components/Footer";
-import { ProviderMock } from "../../__mocks__/ProviderMock";
 
 
 describe("<Footer/>", function(){
@@ -10,3 +9,10 @@ describe("<Footer/>", function(){
         expect(footer.length).toEqual(1);
     })
 })
+
+describe("<Footer/> Snapshot", ()=>{
+    test('snapshot test for Footer', () => {
+        const footer = render(<Footer />);
+        expect(footer).toMatchSnapshot();
+      });
+});
