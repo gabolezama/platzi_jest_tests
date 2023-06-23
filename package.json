@@ -72,6 +72,7 @@
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
   "jest": {
+    "verbose": true,
     "testEnvironment": "jsdom",
     "moduleNameMapper": {
       "\\.styl$": "identity-obj-proxy"

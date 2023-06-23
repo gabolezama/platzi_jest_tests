@@ -1,5 +1,5 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { mount, render, shallow } from "enzyme";
 import { ProviderMock } from "../../__mocks__/ProviderMock";
 import Header from "../../components/Header";
 
@@ -20,5 +20,16 @@ describe("<Header/>", function(){
             </ProviderMock>
         );
         expect(header.find(".Header-title").text()).toEqual("Platzi Store");
+    })
+})
+
+describe("<Header/> Snapshot", function(){
+    test('Probar el snapshot de Header', () => {
+        const header = render(
+            <ProviderMock>
+                <Header/>
+            </ProviderMock>
+        );
+        expect(header).toMatchSnapshot();
     })
 })
